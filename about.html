@@ -11,6 +11,37 @@
             margin: 0;
             padding: 0;
         }
+        .navbar {
+            background: #007BFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .navbar li {
+            margin: 0 10px;
+        }
+        .navbar a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 18px 24px;
+            font-size: 18px;
+            font-weight: 500;
+            border-radius: 4px 4px 0 0;
+            transition: background 0.2s, color 0.2s;
+        }
+        .navbar a:hover, .navbar a.active {
+            background: #0056b3;
+            color: #f0f8ff;
+        }
         .container {
             max-width: 700px;
             margin: 50px auto;
@@ -48,9 +79,25 @@
             border-radius: 4px;
             font-size: 16px;
         }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 10px;
+            }
+            .navbar a {
+                padding: 12px 10px;
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 <body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
     <div class="container">
         <h2>About Us</h2>
         <p>
